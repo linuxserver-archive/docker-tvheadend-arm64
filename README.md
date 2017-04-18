@@ -3,7 +3,7 @@
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
 [appurl]: https://www.tvheadend.org/
-[hub]: https://hub.docker.com/r/linuxserver/tvheadend/
+[hub]: https://hub.docker.com/r/lsioarmhf/tvheadend-aarch64/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,9 +12,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
-# linuxserver/tvheadend
-[![](https://images.microbadger.com/badges/version/linuxserver/tvheadend.svg)](https://microbadger.com/images/linuxserver/tvheadend "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/tvheadend.svg)](http://microbadger.com/images/linuxserver/tvheadend "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/tvheadend.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/tvheadend.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-tvheadend)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-tvheadend/)
-
+# lsioarmhf/tvheadend-aarch64
+[![](https://images.microbadger.com/badges/version/lsioarmhf/tvheadend-aarch64.svg)](https://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/tvheadend-aarch64.svg)](http://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/tvheadend-aarch64.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/tvheadend-aarch64.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-arm64/lsioarm64-tvheadend)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-arm64/job/lsioarm64-tvheadend/)
 
 [Tvheadend](https://www.tvheadend.org/) is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources.
 Tvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT>IP streaming.
@@ -35,14 +34,14 @@ docker create \
   -p 9981:9981 \
   -p 9982:9982 \
   --device=/dev/dvb
-  linuxserver/tvheadend
+  lsioarmhf/tvheadend-aarch64
 ```
 The --device=/dev/dvb is only needed if you want to pass through a DVB card to the container. If you use IPTV or HDHomeRun you can leave it out.
 
 
 You can choose between ,using tags, latest (default, and no tag required or a specific stable version of tvheadend.
 
-Add one of the tags, if required, to the linuxserver/tvheadend line of the run/create command in the following format, linuxserver/tvheadend:stable-4.0.9
+Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:stable-4.0.9
 
 #### Tags
 
@@ -89,6 +88,7 @@ In some cases it might be necessary to start tvheadend with additional parameter
 
 
 ## Setting up the application
+`IMPORTANT... THIS IS THE ARM64 VERSION`
 
 The setup depends if you run the one of the stable tags or use latest. Running latest is the easiest as it has a setup wizard.
 
@@ -151,13 +151,4 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
-+ **18.04.2017:** Use repo version of gnu-libiconv rather than compiling.
-+ **09.04.2017:** Chain cpanm installs in one block and use --installdeps.
-+ **09.02.2017:** Perl changes, add picons file to gitignore and update XMLTV to 0.5.69.
-+ **07.02.2017:** Add variable to add additional runtime paramters.
-+ **05.02.2017:** Update to alpine 3.5 and change dvb-apps to only compile needed libs.
-+ **14.11.2016:** Add picons from picons.xyz to /picons folder and add info to README.
-+ **22.09.2016:** Fix broken tv_grab_wg, libs for xmltv and update README.
-+ **18.09.2016:** Update XMLTV to 0.5.68 and update README.
-+ **10.09.2016:** Add layer badges to README.
-+ **05.09.2016:** Initial release.
++ **18.04.2017:** Initial Release.

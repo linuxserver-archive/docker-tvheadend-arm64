@@ -184,6 +184,7 @@ RUN \
 	"https://sourceforge.net/projects/argtable/files/argtable/argtable-${ARGTABLE_VER}/argtable${ARGTABLE_VER1}.tar.gz" && \
  tar xf /tmp/argtable-src.tar.gz -C \
 	/tmp/argtable --strip-components=1 && \
+ cp /tmp/patches/config.* /tmp/argtable && \
  cd /tmp/argtable && \
  ./configure \
 	--prefix=/usr && \
