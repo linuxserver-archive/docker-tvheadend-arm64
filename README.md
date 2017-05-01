@@ -45,7 +45,8 @@ Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the
 
 #### Tags
 
-+ **stable-4.0.9** : latest stable version.
++ **stable-4.2.1** : latest stable version.
++ **stable-4.0.9** : old stable version. Will not be updated anymore!
 
 #### Host vs. Bridge
 
@@ -151,4 +152,5 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
++ **01.05.2017:** Update to tvheadend 4.2.1 stable.
 + **18.04.2017:** Initial Release.
