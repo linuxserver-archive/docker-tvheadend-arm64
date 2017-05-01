@@ -41,7 +41,7 @@ The --device=/dev/dvb is only needed if you want to pass through a DVB card to t
 
 You can choose between ,using tags, latest (default, and no tag required or a specific stable version of tvheadend.
 
-Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:stable-4.0.9
+Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:stable-4.2.1
 
 #### Tags
 
