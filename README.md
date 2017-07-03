@@ -39,13 +39,14 @@ docker create \
 The --device=/dev/dvb is only needed if you want to pass through a DVB card to the container. If you use IPTV or HDHomeRun you can leave it out.
 
 
-You can choose between ,using tags, latest (default, and no tag required or a specific stable version of tvheadend.
+You can choose between ,using tags, latest (default, and no tag required or a specific release branch of tvheadend.
 
-Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:stable-4.2.1
+Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:release-4.2
 
 #### Tags
 
-+ **stable-4.2.1** : latest stable version.
++ **release-4.2** : latest release from 4.2 branch. Freshly built every friday night uk time.
++ **stable-4.2.1** : old stable version. Will not be updated anymore!
 + **stable-4.0.9** : old stable version. Will not be updated anymore!
 
 #### Host vs. Bridge
@@ -152,6 +153,7 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
++ **03.07.2017:** Move to one branch for all 4.2 releases.
 + **31.05.2017:** Rebase to alpine 3.6.
 + **01.05.2017:** Update to tvheadend 4.2.1 stable.
 + **18.04.2017:** Initial Release.
