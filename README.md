@@ -13,7 +13,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/tvheadend-aarch64
-[![](https://images.microbadger.com/badges/version/lsioarmhf/tvheadend-aarch64.svg)](https://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/tvheadend-aarch64.svg)](http://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/tvheadend-aarch64.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/tvheadend-aarch64.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-arm64/lsioarm64-tvheadend)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-arm64/job/lsioarm64-tvheadend/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/tvheadend-aarch64.svg)](https://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/tvheadend-aarch64.svg)](http://microbadger.com/images/lsioarmhf/tvheadend-aarch64 "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/tvheadend-aarch64.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/tvheadend-aarch64.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/arm64/arm64-tvheadend)](https://ci.linuxserver.io/job/Docker-Builders/job/arm64/job/arm64-tvheadend/)
 
 [Tvheadend](https://www.tvheadend.org/) is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources.
 Tvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT>IP streaming.
@@ -39,7 +39,7 @@ docker create \
 The --device=/dev/dvb is only needed if you want to pass through a DVB card to the container. If you use IPTV or HDHomeRun you can leave it out.
 
 
-You can choose between ,using tags, latest (default, and no tag required or a specific release branch of tvheadend.
+You can choose between ,using tags, latest (default, and no tag required or a specific stable version of tvheadend.
 
 Add one of the tags, if required, to the lsioarmhf/tvheadend-aarch64 line of the run/create command in the following format, lsioarmhf/tvheadend-aarch64:release-4.2
 
@@ -123,7 +123,7 @@ This container comes with Comskip for commercial flagging of recordings. This yo
 Go to Configuration --> Recording. Change the view level to advanced in the top right corner, and add the below in the Post-processor command field.
 
 ```
-comskip --ini=/config/comskip/comskip.ini "%f"
+/usr/bin/comskip --ini=/config/comskip/comskip.ini "%f"
 ```
 
 Now comskip will run after each recording is finished. You will find comskip.ini in the comskip folder of your /config volume mapping. See the [Comskip](http://www.kaashoek.com/comskip/) homepage for tuning of the ini file.
@@ -153,6 +153,7 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
++ **09.07.2017:** Update README with full path for comskip.
 + **03.07.2017:** Move to one branch for all 4.2 releases.
 + **31.05.2017:** Rebase to alpine 3.6.
 + **01.05.2017:** Update to tvheadend 4.2.1 stable.
