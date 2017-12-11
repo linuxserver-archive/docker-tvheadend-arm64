@@ -153,6 +153,7 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
++ **11.12.2017:** Rebase to alpine 3.7, linting fixes.
 + **02.09.2017:** Add codec dependencies.
 + **09.07.2017:** Update README with full path for comskip.
 + **03.07.2017:** Move to one branch for all 4.2 releases.
