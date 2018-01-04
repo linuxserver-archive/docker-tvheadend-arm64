@@ -154,10 +154,10 @@ You need to enable minimum advanced view level to see the picons options.
 ## Versions
 
 + **04.01.18:** Deprecate cpu_core routine lack of scaling.
-+ **11.12.2017:** Rebase to alpine 3.7, linting fixes.
-+ **02.09.2017:** Add codec dependencies.
-+ **09.07.2017:** Update README with full path for comskip.
-+ **03.07.2017:** Move to one branch for all 4.2 releases.
-+ **31.05.2017:** Rebase to alpine 3.6.
-+ **01.05.2017:** Update to tvheadend 4.2.1 stable.
-+ **18.04.2017:** Initial Release.
++ **11.12.17:** Rebase to alpine 3.7, linting fixes.
++ **02.09.17:** Add codec dependencies.
++ **09.07.17:** Update README with full path for comskip.
++ **03.07.17:** Move to one branch for all 4.2 releases.
++ **31.05.17:** Rebase to alpine 3.6.
++ **01.05.17:** Update to tvheadend 4.2.1 stable.
++ **18.04.17:** Initial Release.
