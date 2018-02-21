@@ -153,6 +153,7 @@ You need to enable minimum advanced view level to see the picons options.
 
 ## Versions
 
++ **21.02.18:** Fix wrong version of iconv used, remove old patch and add some build options from CvH.
 + **09.07.2017:** Update README with full path for comskip.
 + **03.07.2017:** Move to one branch for all 4.2 releases.
 + **31.05.2017:** Rebase to alpine 3.6.
